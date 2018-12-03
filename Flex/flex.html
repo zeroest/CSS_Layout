@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container{
+      background-color: powderblue;
+      height: 300px;
+      display: flex;
+      flex-direction:row;
+    }
+    .item{
+      background-color: tomato;
+      color: white;
+      border: 1px solid white;
+    }
+    .item:nth-child(1){
+      flex-basis: 200px;
+      flex-shrink: 0;
+    }
+    .item:nth-child(2){
+      flex-basis: 300px;
+      flex-shrink: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>
+
+<!--
+표는 격자모양으로 그리드 모양으로 생겼기 때문에 이를 착안해서 레이아웃을 잡곤 하였다
+그러나 표라고 하는 것은 구조화된 정보, 그리고 많은 정보를 잘 정리 정돈하기 위한 정보로서의
+의미를 가지고 있는데 그것을 의미가 없는 레이아웃으로 사용하게 되니 검색엔진이나
+스크린 리더 등 여러가지 html을 해석하는 여러 소프트웨어의 입장에서 표인지 레이아웃인지 구분하기
+어려워 졌다. 또한 테이블의 경우 복잡하고 코드 양이 많기 때문에 짜는 것은 쉽지만 유지보수성이
+매우 낮았다 이에 문제점을 인식하고 새로운 대안을 만들기 시작 했다
+포지션을통해서 각각의 엘리먼트를 적당한 위치로 옮기는 방식을 사용했다
+플로팅을 사용해서 레이아웃을 사용하기도 했습니다. 그런데 플로팅 같은 경우 이해하기 어렵고
+그리고 또한 레이아웃을 만들기 위해서 고안된 것이라고 보기는 어렵다.
+그리고 결정적으로 flex가 만들어 졌다.
+
+플렉스를 사용하기 위해 태그가 두단계가 필요하다 li태그가 ul ol 과 함께 나타나는 것과 같이
+정렬하고자 하는 그 각각의 아이템들은 그 부모에 해당되는 컨테이너가 필요하다
+
+
+ -->
