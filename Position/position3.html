@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #other, #parent, #child{
+      border:5px solid red;
+    }
+    #child{
+      background-color: black;
+      color: white;
+      position: fixed;
+      left: 100px;
+      top: 100px;
+    }
+    #end{
+      height: 10000px;
+    }
+  </style>
+</head>
+<body>
+  <div id="other">다른부분</div>
+  <div id="parent">
+    부모부분
+    <div id="child">자식부분</div>
+  </div>
+  <div id="end"></div>
+</body>
+</html>
+<!-- 스크롤로부터 독립되도록 유지시켜준다
+http://ko.learnlayout.com/position.html -->

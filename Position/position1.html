@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html{
+      border:1px solid black;
+    }
+    div{
+      border:5px solid red;
+      margin: 10px;
+    }
+    #child{
+      position: static;
+      top: 100px;
+      left:100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="other">다른부분</div>
+  <div id="parent">
+    부모부분
+    <div id="child">자식부분</div>
+  </div>
+</body>
+</html>
+<!-- 포지션이라는 것은 엘리먼트가 화면상에 어디에 위치할 것인가를 결정하는 것
+box모델이 부피감을 결정하는 중요한 요소였다면 포지션은 각각의 엘리먼트의 위치를 지정하는 방식
+left, top > offset 이라한다!
+ -->

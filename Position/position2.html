@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    div {
+      border: 5px solid red;
+    }
+
+    #parent {
+      position: relative;
+    }
+
+    #child {
+      background-color: black;
+      color: white;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="other">다른부분</div>
+  <div id="parent">
+    부모부분
+    <div id="child">자식부분</div>
+  </div>
+</body>
+
+</html>
+<!-- 가장 경계에 있는 html 엘리먼트를 기준으로 움직이고 싶을때
+엘리먼트를 absolute로 지정하게 되면 그 엘리먼트는 더 이상 부모의 소속이 아닙니다.
+자식부분이 상속이 끊기게 되면서 부모부분에서 자식부분의 자리는 사라지게 되고
+부모의 크기에 영향을 받던 자식부분의 크기를 지정할 수 없게 된다
+자신의 컨텐츠 크기만해진다
+직접 width height를 지정해야한다.
+그런데 정확히 말해서 부모의 포지션값이 static이 아닌 relative 값이 되는 순간
+부모의 엘리먼트를 기준으로 움직이게 된다.  -->
